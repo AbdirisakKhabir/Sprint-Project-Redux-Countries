@@ -6,12 +6,9 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import /* You need some sort of reducer */ './reducers';
+import {countriesReducer} from './reducers/countriesReducer';
 
-const store = createStore(
-  () => {}, // this is the most basic reducer. A function that returns and object. Replace it.
-  applyMiddleware(/* be sure to throw in the proper middlewares here*/)
-);
+const store = createStore(countriesReducer, applyMiddleware(thunk));
 
 // Add "Provider" and pass the above store
 ReactDOM.render(

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Countries from './components/Countries';
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -11,9 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>COUNTRIES! W/ Redux</h1>
-        <div>Welcome to your Redux Sprint Project</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
+        <Countries />
       </div>
     );
   }
